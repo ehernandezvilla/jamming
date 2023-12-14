@@ -1,0 +1,35 @@
+{
+    "songs": [
+      {
+        "id": "1",
+        "name": "Imagine",
+        "album": "Imagine",
+        "artist": "John Lennon"
+      },
+      {
+        "id": "2",
+        "name": "Bohemian Rhapsody",
+        "album": "A Night at the Opera",
+        "artist": "Queen"
+      },
+      {
+        "id": "3",
+        "name": "Stairway to Heaven",
+        "album": "Led Zeppelin IV",
+        "artist": "Led Zeppelin"
+      },
+      {
+        "id": "4",
+        "name": "Like a Rolling Stone",
+        "album": "Highway 61 Revisited",
+        "artist": "Bob Dylan"
+      },
+      {
+        "id": "5",
+        "name": "Hotel California",
+        "album": "Hotel California",
+        "artist": "Eagles"
+      }
+    ]
+  }
+  
