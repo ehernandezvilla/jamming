@@ -3,7 +3,7 @@ function Playlist() {
         <>
         <h3>Playlist component</h3>
         {/* <!-- Add a TrackList component --> */}
-        <button className="SaveButton">Save</button>
+        <button className="SaveButton">Save to Spotify</button>
         </>
     );
 }

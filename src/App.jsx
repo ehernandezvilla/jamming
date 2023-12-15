@@ -3,7 +3,6 @@
 import Playlist from './components/Playlist'
 import SearchBar from './components/SearchBar'
 import SearchResults from './components/SearchResults'
-import TrackList from './components/TrackList'
 import './App.css'
 import songs from './assets/utils/songs.json'
 
@@ -14,9 +13,15 @@ function App() {
     <>
       <h1>Dummy Spotify app</h1>
       <SearchBar />
-      <SearchResults />
-      <Playlist />
-      <TrackList data = {songs} />
+      
+      <div className='BodyContainer'>
+        <div className='SeparatorContainer'>
+          <SearchResults data = {songs} />
+        </div>
+        <div className='SeparatorContainer'>
+          <Playlist />
+        </div>
+      </div>
     </>
   )
 }

@@ -1,11 +1,19 @@
-function SearchResults() {
+import TrackList from "./TrackList";
+import PropTypes from 'prop-types';
+
+function SearchResults({ data }) {
     return (
         <div className="SearchResults">
         <h2>Results</h2>
         <h3>Search Results component</h3>
-        <button className="Track-action">+</button>
+        <TrackList data = {data} />
         </div>
     );
 }
+
+SearchResults.propTypes = {
+    data: PropTypes.array.isRequired
+}
+
 
 export default SearchResults;
