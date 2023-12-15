@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 import Track from "./Track";
 
-function TrackList({ data }) {
-  return (
+function TrackList({ data, onAddSong }) {
+
+return (
     <>
         <div>
         {data.songs.map((song) => (
-           <Track key={song.id} data={song} />
+           <Track key={song.id} data={song} onAdd={() => onAddSong(song)} />
          ))}
       </div>
     </>
@@ -24,6 +25,7 @@ TrackList.propTypes = {
             })
         )
     }).isRequired,
+    onAddSong: PropTypes.func.isRequired,
 };
 
 export default TrackList;

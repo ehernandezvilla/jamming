@@ -12,7 +12,7 @@ function SearchResults({ data }) {
 }
 
 SearchResults.propTypes = {
-    data: PropTypes.array.isRequired
+    data: PropTypes.object.isRequired
 }
 
 
