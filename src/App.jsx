@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import Playlist from './components/Playlist'
 import SearchBar from './components/SearchBar'
+import TrackList from './components/TrackList';
 import './App.css'
 import songs from './assets/utils/songs.json'
-import TrackList from './components/TrackList';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
       <SearchBar />
       <div className='BodyContainer'>
         <div className='SeparatorContainer'>
-        <TrackList data={songs} onAddSong={(song) => setSelectedSongs([...selectedSongs, song])} />
+        <TrackList data={songs} onAddSong={(song) => setSelectedSongs([...selectedSongs, song])} /> 
         </div>
         <div className='SeparatorContainer'>
           <Playlist selectedSongs={selectedSongs}/>

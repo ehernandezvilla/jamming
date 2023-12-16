@@ -8,6 +8,7 @@ function Playlist({ selectedSongs }) {
         {selectedSongs.map((song) => (
             <div key={song.id}>
                 <p>{song.name} | {song.artist} | {song.album}</p>
+                <hr></hr>
             </div>
         )
         )}
