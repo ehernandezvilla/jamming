@@ -4,6 +4,7 @@ import Playlist from "./components/Playlist";
 import SearchBar from "./components/SearchBar";
 import SearchResults from "./components/SearchResults";
 import songs from "./assets/utils/songs.json";
+import Footer from "./components/Footer";
 
 function App() {
   const [selectedSongs, setSelectedSongs] = useState([]);
@@ -40,6 +41,7 @@ function App() {
           <Playlist selectedSongs={selectedSongs} />
         </div>
       </div>
+      <Footer />
     </>
   );
 }
