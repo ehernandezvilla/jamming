@@ -17,6 +17,9 @@ function App() {
   };
 
   const handleSearch = (searchTerm) => {
+    if (searchTerm === "") {
+      setSearchResults({ songs: [] });
+    } else {
     const filteredSongs = songs.songs.filter(
       (song) =>
         song.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -24,7 +27,7 @@ function App() {
         song.album.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults({ songs: filteredSongs });
-  };
+  }};
 
   return (
     <>

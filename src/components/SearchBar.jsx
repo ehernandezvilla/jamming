@@ -7,7 +7,9 @@ function SearchBar( { onSearch }) {
 
     const handleSearch = () => {
         onSearch(searchTerm);
-    
+        // if (searchTerm === '') {
+        //     setSearchTerm('')
+        // }
     }
 
     return (

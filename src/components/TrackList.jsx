@@ -1,16 +1,29 @@
 import PropTypes from "prop-types";
 import Track from "./Track";
+import styles from '../assets/styles/TrackList.module.css';
 
 function TrackList({ data, onAddSong }) {
-  return (
-    <>
-      <div>
-        {data.songs.map((song) => (
-          <Track key={song.id} data={song} onAdd={() => onAddSong(song)} />
-        ))}
-      </div>
-    </>
-  );
+
+  if (data.songs.length === 0) {
+      return (
+        <>
+          <div>
+            <h3 className={styles.NotFound}>No results found</h3>
+          </div>
+        </>
+          );
+    } else {
+      return (
+        <>
+          <div>
+            {data.songs.map((song) => (
+              <Track key={song.id} data={song} onAdd={() => onAddSong(song)} />
+            ))}
+          </div>
+        </>
+          );
+    }
+  
 }
 
 TrackList.propTypes = {
