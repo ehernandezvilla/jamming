@@ -1,0 +1,11 @@
+.Footer {
+    background-color: black;
+    height: 100px;
+    color: white;
+}
+
+
+.FooterContainer {
+    padding-top: 50px;
+    text-align: center;
+}

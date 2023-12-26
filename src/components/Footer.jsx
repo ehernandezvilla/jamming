@@ -1,8 +1,10 @@
+import styles from '../assets/styles/Footer.module.css';
+
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="container">
-        <span className="text-muted">Footer copy</span>
+    <footer className={styles.Footer}>
+      <div className={styles.FooterContainer}>
+        <p className={styles.Footer}>Footer copy</p>
       </div>
     </footer>
   );
