@@ -16,8 +16,12 @@ function App() {
     }
   };
 
-  const handleSearch = (searchTerm) => {
-    if (searchTerm === "") {
+  const handleRemoveSong = (songId) => {
+    setSelectedSongs(selectedSongs.filter((song) => song.id !== songId));
+  };
+
+  const handleSearch = (searchTerm) => { 
+    if (searchTerm === "") { // if search bar is empty, display no results
       setSearchResults({ songs: [] });
     } else {
     const filteredSongs = songs.songs.filter(
@@ -41,7 +45,10 @@ function App() {
           />
         </div>
         <div className="SeparatorContainer">
-          <Playlist selectedSongs={selectedSongs} />
+          <Playlist 
+            selectedSongs={selectedSongs} 
+            onRemoveSong={handleRemoveSong}
+            />
         </div>
       </div>
       <Footer />
