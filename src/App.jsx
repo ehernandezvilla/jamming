@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 function App() {
   const [selectedSongs, setSelectedSongs] = useState([]);
   const [searchResults, setSearchResults] = useState({ songs: [] });
+  const [playlistName, setPlaylistName] = useState("");
 
   const handleAddSong = (song) => {
     if (!selectedSongs.some((selectedSong) => selectedSong.id === song.id)) {
@@ -33,6 +34,20 @@ function App() {
     setSearchResults({ songs: filteredSongs });
   }};
 
+  const handleSavePlaylist = () => {
+    if (!playlistName) {
+      alert("Please enter a playlist name");
+      return;
+    }
+    const playlist = {
+      name: playlistName,
+      songs: selectedSongs,
+    };
+
+    console.log("Playlist saved:", playlist);
+  };
+
+
   return (
     <>
       <h1>Dummy Spotify app</h1>
@@ -48,6 +63,9 @@ function App() {
           <Playlist 
             selectedSongs={selectedSongs} 
             onRemoveSong={handleRemoveSong}
+            playlistName={playlistName}
+            setPlaylistName={setPlaylistName}
+            onSavePlaylist={handleSavePlaylist}
             />
         </div>
       </div>
